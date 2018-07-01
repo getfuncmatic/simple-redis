@@ -1,0 +1,24 @@
+{
+  "name": "@funcmatic/simple-redis",
+  "version": "1.0.0-alpha",
+  "description": "Wrapper around node redis that only supports get, set, del and is async/await compatible",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Daniel Jhin Yoo <danieljyoo@gmail.com> (https://github.com/danieljyoo)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danieljyoo/simple-redis.git"
+  },
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
