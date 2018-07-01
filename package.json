@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danieljyoo/simple-redis.git"
+    "url": "https://github.com/getfuncmatic/simple-redis.git"
   },
   "dependencies": {
     "redis": "^2.8.0"
