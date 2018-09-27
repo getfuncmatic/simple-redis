@@ -1,6 +1,6 @@
 {
   "name": "@funcmatic/simple-redis",
-  "version": "1.0.0-alpha",
+  "version": "1.0.1",
   "description": "Wrapper around node redis that only supports get, set, del and is async/await compatible",
   "main": "index.js",
   "scripts": {
