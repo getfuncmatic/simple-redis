@@ -1,3 +1,4 @@
+require('dotenv').config()
 var redis = require("../lib/redis")
   
 describe('Redis', () => {
