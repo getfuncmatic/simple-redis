@@ -24,6 +24,26 @@ describe('Redis', () => {
     expect(val2).toBeFalsy()
     await client.quit()
   })
+  it ('should use set commands sadd, scard, smembers', async () => {
+    var client = await redis.connect({
+      uri: process.env.REDIS_ENDPOINT,
+      password: process.env.REDIS_PASSWORD
+    })
+    await client.del('setkey')
+    var add1 = await client.sadd('setkey', 'hello')
+    expect(add1).toBe(1)
+    var add2 = await client.sadd('setkey', 'world')
+    expect(add2).toBe(1)
+    var card = await client.scard('setkey')
+    expect(card).toBe(2)
+    var dup = await client.sadd('setkey', 'hello')
+    expect(dup).toBe(0)
+    var card2 = await client.scard('setkey')
+    expect(card2).toBe(2)
+    var members = await client.smembers('setkey')
+    expect(members.sort()).toEqual([ 'hello', 'world' ])
+    await client.quit()
+  })
 })
 
 
